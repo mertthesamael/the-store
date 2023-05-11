@@ -1,0 +1,29 @@
+import Header from "@/components/Header"
+import styles from "./style.module.scss"
+
+
+const HomeWelcome = () => {
+
+    return(
+        <section className={styles.welcome}>
+            <Header></Header>
+            <div className={styles.welcome__introduction}>
+                <div className={styles.welcome__introduction__brand}>
+                    <h2>This is</h2>
+                    <h1>The Store</h1>
+                </div>
+                <div className={styles.welcome__introduction__desc}>
+                    <p>The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort sum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort </p>
+                </div>
+                <a className={styles.welcome__introduction__ctaButton} href="#testimonial">
+                
+                    Explore
+                
+                </a>
+             
+            </div>
+        </section>
+    )
+}
+
+export default HomeWelcome

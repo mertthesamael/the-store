@@ -1,0 +1,38 @@
+.testimonial{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../assets/png/testimonialbg.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+scroll-snap-align: start;
+    
+    &__banner{
+        width: 80%;
+        height: 10rem;
+        background: rgba(255, 255, 255, 0.068);
+        border: 1px solid rgba(255, 255, 255, 0.295);
+        box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(9px);
+        border-radius: 28px;
+        display: grid;
+        place-items: center;
+
+        & h1{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        color: white;
+        }
+    }
+    &__items{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}

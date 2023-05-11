@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+   
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+}
+
+*{
+    scroll-behavior: smooth;
+}

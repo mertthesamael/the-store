@@ -1,0 +1,31 @@
+.categories{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+scroll-snap-align: start;
+    
+    & h1{
+        font-weight: bolder;
+        font-size: 3rem;
+    }
+    &__banner{
+        width: 80%;
+        height: 17rem;
+        background-image: url("../../assets/png/neonShirt.png");
+        background-position:0 -250px;
+        background-size: cover;
+        border-radius: 18px;
+        padding: 2rem;
+        font-size: 4rem;
+        color: white;
+        font-weight: bolder;
+    }
+
+    &__items{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
