@@ -1,7 +1,18 @@
 .category{
     width: 314px;
-height: 301px;
-
-background: #FFE87C;
-border-radius: 20px;
+    height: 301px;
+    position: relative;
+    background: #FFE87C;
+    border-radius: 20px;
+    overflow: hidden;
+ & h2{
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    bottom: 2rem;
+    left: 2rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    
+ }
 }
