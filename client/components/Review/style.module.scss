@@ -1,0 +1,21 @@
+.review{
+    width: 100%;
+    height: max-content;
+    background: rgba(217, 217, 217, 0.09);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 10px;
+    & h1{
+        font-size: 22px!important;
+        font-style:italic;
+    }
+    & p{
+        font-size: 16px!important;
+        font-weight: 300!important;
+        color: rgba(255, 255, 255, 0.48);
+
+    }
+}

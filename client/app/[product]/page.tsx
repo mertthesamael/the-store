@@ -1,11 +1,12 @@
+
 import Image from "next/image"
 import styles from "./style.module.scss"
 import Header from "@/components/Header"
 import jump from "@/assets/png/jump.png"
 import DetailContainer from "@/containers/detail-container"
-
+import { useEffect } from "react"
+import AOS from "aos"
 const Product = () => {
-
 
     return(
         <main className={styles.product}>
