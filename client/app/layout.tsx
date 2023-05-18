@@ -3,7 +3,7 @@ import '@/styles/reset.scss'
 import '@/styles/global.scss'
 import Header from '@/components/Header'
 
-const roboto = Roboto({ subsets: ['latin'], weight:['400','300'], })
+const roboto = Roboto({ subsets: ['latin'], weight:['100','400','300'], })
 
 export const metadata = {
   title: 'Create Next App',

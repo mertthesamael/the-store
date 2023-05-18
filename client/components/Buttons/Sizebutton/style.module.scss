@@ -1,0 +1,18 @@
+.sizeButton{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(50px);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    font-weight: lighter;
+
+    /* Note: backdrop-filter has minimal browser support */
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
