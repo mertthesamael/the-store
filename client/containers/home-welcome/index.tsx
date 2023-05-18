@@ -5,7 +5,7 @@ import styles from "./style.module.scss"
 const HomeWelcome = () => {
 
     return(
-        <section className={styles.welcome}>
+        <section id='welcome' className={styles.welcome}>
             <Header></Header>
             <div className={styles.welcome__introduction}>
                 <div className={styles.welcome__introduction__brand}>
