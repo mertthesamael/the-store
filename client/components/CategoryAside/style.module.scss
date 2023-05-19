@@ -1,0 +1,39 @@
+.category{
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    padding: 1rem 2rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(16px);
+    position: relative;
+    & h2{
+        transition: .5s ease;
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: .5s ease;
+        background-color: white;
+
+    }
+    &:hover{
+        & h2{
+           position: relative;
+            z-index: 3;
+            color: black;
+        }
+    }
+    &:hover::after{
+        width: 100%;
+        background-color: white;
+        
+    }
+}

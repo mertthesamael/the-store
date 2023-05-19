@@ -21,6 +21,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        text-decoration: none;
+        color: inherit;
         & h1{
             font-weight: 700;
             font-size: 36px;

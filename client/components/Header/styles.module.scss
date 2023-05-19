@@ -18,10 +18,17 @@
         justify-content: flex-end;
         align-items: center;
         gap: 4rem;
+        
         & nav{
+
             display: flex;
             gap: 3rem;
-            font-weight: bolder;
+
+            & a{
+                font-weight: bolder;
+                color: inherit;
+                text-decoration: none;
+            }
         }
     }
 }
