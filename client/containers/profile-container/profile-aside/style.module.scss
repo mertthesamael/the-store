@@ -1,0 +1,22 @@
+.aside{
+    padding: 2rem;
+    width: 478px;
+    height: 763px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.31);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 17px;
+     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__categories{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

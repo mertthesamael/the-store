@@ -1,9 +1,11 @@
 body{
     background-color: black;
-   
-    scroll-snap-type: y mandatory;
 }
-
+main{
+}
 *{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
