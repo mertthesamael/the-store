@@ -1,5 +1,6 @@
 import styles from "./style.module.scss"
 import ProfileAside from "./profile-aside"
+import ProfileInfo from "./profile.info"
 
 const ProfileContainer = () => {
 
@@ -8,7 +9,9 @@ const ProfileContainer = () => {
             <div className={styles.profile__inner}>
                 <ProfileAside />
                 <div className={styles.profile__inner__content}>
-
+                    <div className={styles.profile__inner__content}>
+                        <ProfileInfo />
+                    </div>
                 </div>
             </div>
         </div>

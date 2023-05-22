@@ -21,7 +21,9 @@ const Header = () => {
                     <Link href={'/products'}>Navigate</Link>
                     <Link href={'/item'}>Navigate</Link>
                 </nav>
+                <Link href={'/profile'} style={{textDecoration:'none'}}>
                 <UserButton number={2}></UserButton>
+                </Link>
             </div>
         </header>
     )

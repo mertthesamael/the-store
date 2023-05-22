@@ -1,0 +1,58 @@
+.favoritecard{
+    width: 220px;
+min-height: 306px;
+left: 702px;
+top: 630px;
+
+background: rgba(255, 255, 255, 0.349);
+border: 1px solid rgba(0, 0, 0, 0.062);
+backdrop-filter: blur(3px);
+/* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem;
+    gap: 1rem;
+    &__image{
+        width: 135px;
+        height: 135px;
+        position: relative;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 6px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        & h1{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+           
+        }
+        & p{
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #ffffff;
+            color: black;
+
+        }
+    }
+    &__cta{
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        align-items: center;
+    }
+}

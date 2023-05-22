@@ -1,0 +1,53 @@
+.popup{
+    width: 100vw;
+    background-color: rgba(255, 0, 0, 0.507);
+    position: absolute;
+    background-image: url("../../assets/png/testimonialbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+
+    &__inner{
+        width: 1254px;
+    height: 656px;
+ 
+    background: #FFFFFF;
+    border-radius: 52px;
+        display: flex;
+        padding: 4rem;
+        gap: 4rem;
+    &__form{
+        min-width: 40%;
+        min-height: 80%;
+        left: 337px;
+        top: 223px;
+
+        background: linear-gradient(90deg, #F281DC 0%, #5CC4E9 100%);
+        border-radius: 31px;
+    }
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      & h1{
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 75px;
+        letter-spacing: 0em;
+        text-align: left;
+        
+      }
+      & p{
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #999999;
+
+      }
+    }
+    }
+}

@@ -8,10 +8,12 @@ const ItemsBody = () => {
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>
-                <CategoryAside text='Category'/>
-                <CategoryAside text='Category'/>
-                <CategoryAside text='Category'/>
-                <CategoryAside text='Category'/>
+                <div className={styles.body__category__wrapper}>
+                    <CategoryAside text='Category'/>
+                    <CategoryAside text='Category'/>
+                    <CategoryAside text='Category'/>
+                    <CategoryAside text='Category'/>
+                </div>
             </div>
             <div className={styles.body__items}>
                 <ProductCard />

@@ -2,6 +2,7 @@ import { Roboto } from 'next/font/google'
 import '@/styles/reset.scss'
 import '@/styles/global.scss'
 import Header from '@/components/Header'
+import AuthPopup from '@/containers/AuthPopup'
 const roboto = Roboto({ subsets: ['latin'], weight:['100','400','300'], })
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
        
       <body className={roboto.className}>
+        <AuthPopup />
         {children}
         </body>
     </html>
