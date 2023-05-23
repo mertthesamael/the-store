@@ -6,6 +6,8 @@ import close from "@/assets/png/icon/close.png"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import ThemeButton from "@/components/Buttons/ThemeButton"
+import SecondaryInput from "@/components/Inputs/SecondaryInput"
+import LoginForm from "./LoginForm"
 const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
@@ -25,12 +27,16 @@ const AuthPopup = () => {
             <Image onClick={closeHandle} style={{position:'absolute', top:'2rem', right:'2rem', cursor:'pointer'}} src={close} alt="icon"></Image>
             <div className={styles.popup__inner}>
                 <div className={styles.popup__inner__form}>
-
+                    <LoginForm></LoginForm>
                 </div>
                 <div className={styles.popup__inner__desc}>
                     <h1>Join Us!</h1>
                     <p>Lorem ipsum dolor sit amen zart zurt ve biraz da zort falan bişeyler bilmiyorum ben naber knk iyi bende ne olsun hayat bana waikiki way way ama cok da degil bilmiyom random kelimeler seks 1 2 3</p>
-                    <ThemeButton onClick={""} text='Login' color="#FFD362F0"></ThemeButton>
+                    <div className={styles.popup__inner__desc__buttons}>
+                    <ThemeButton onClick={""} text='Login' color="#FFD362F0" />
+                    <ThemeButton onClick={""} text='Sign Up' color="#46E99B" />
+                    </div>
+
                 </div>
             </div>
         </motion.div>

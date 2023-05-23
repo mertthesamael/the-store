@@ -48,6 +48,16 @@
         color: #999999;
 
       }
+
+      &__buttons{
+        display: flex;
+        gap: 2rem;
+        & button{
+          height: 3rem;
+          width: max-content;
+          padding: 0 3rem;
+        }
+      }
     }
     }
 }
