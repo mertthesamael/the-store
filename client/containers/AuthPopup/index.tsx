@@ -8,12 +8,13 @@ import { motion } from "framer-motion"
 import ThemeButton from "@/components/Buttons/ThemeButton"
 import SecondaryInput from "@/components/Inputs/SecondaryInput"
 import LoginForm from "./LoginForm"
+import SignupForm from "./SignupForm"
 const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
   }
 const AuthPopup = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const closeHandle = () => {
         return setIsOpen(false)
     }
@@ -27,7 +28,7 @@ const AuthPopup = () => {
             <Image onClick={closeHandle} style={{position:'absolute', top:'2rem', right:'2rem', cursor:'pointer'}} src={close} alt="icon"></Image>
             <div className={styles.popup__inner}>
                 <div className={styles.popup__inner__form}>
-                    <LoginForm></LoginForm>
+                    <SignupForm/>
                 </div>
                 <div className={styles.popup__inner__desc}>
                     <h1>Join Us!</h1>

@@ -10,17 +10,21 @@ interface Input {
 
 const SecondaryInput : React.FC<Input> = ({placeholder,type,label,id, name}) => {
 
-    if(label&&type!='radio'){
+    if(label&&type=='radio'){
         return(
-        <div style={{display:'grid', gap:'1rem'}}>
-            <label style={{color:'#645353', fontSize:'24px', fontWeight:'400'}} htmlFor={id}>{label}</label>
-            <input placeholder={placeholder} name={name} type={type} className={styles.secondaryInput} />
-        </div>
+        <label className={styles.container} >{label}
+            <input type="radio"  name={name}/>
+            <span className={styles.checkmark} />
+        </label>
+       
         )
     }
 
     return(
+        <div style={{display:'grid',gap:'1rem'}}>
+        <label>{label}</label>
         <input placeholder={placeholder} name={name} type={type} className={styles.secondaryInput} />
+        </div>
     )
 }
 
