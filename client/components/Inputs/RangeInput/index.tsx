@@ -11,7 +11,6 @@ const MAX = 100;
 const RangeInput = ({rtl}:{rtl:boolean}) => {
 
     const [values, setValues] = useState([20, 40]);
-  console.log(values)
     return(
         <div
         style={{

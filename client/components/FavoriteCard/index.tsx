@@ -15,7 +15,7 @@ const FavoriteCard = () => {
                 <p>Lorem ipsum dolor sit amen ffalan bişeyler zort...</p>
             </div>
             <div className={styles.favoritecard__cta}>
-                 <ThemeButton onClick={""} text={"Buy Now"} color="rgba(0, 255, 127, 0.58);"></ThemeButton>
+                 <ThemeButton onClick={""} text={"Buy Now"} color="#46E99B"></ThemeButton>
                  <Image src={favorite} alt="Favorited"/>
             </div>
         </div>
