@@ -4,14 +4,25 @@ import ThemeButton from "../Buttons/ThemeButton"
 import styles from "./styles.module.scss"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { SlArrowLeft } from "react-icons/sl"
 
 
-
-const UserButton = ({number}:{number:number}) => {
+const UserButton = ({number, basket}:{number:number, basket?:boolean}) => {
     const [isOpen, setIsOpen] = useState(false)
     const openHandler = () => {
 
         return setIsOpen(!isOpen)
+    }
+    if(basket){
+        return(
+            <div className={styles.quantity}>
+                <SlArrowLeft cursor={'pointer'} color="black"/>
+                <div className={styles.userButton}>
+                    <p>{number}</p>
+                </div>
+                <SlArrowLeft color="black" cursor={'pointer'} style={{rotate:'180deg'}}/>
+            </div>
+        )
     }
         return(
             <div onClick={openHandler} className={styles.userButton}>

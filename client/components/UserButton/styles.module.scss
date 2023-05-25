@@ -9,7 +9,7 @@
     position: relative;
     &__dropdown{
         position: absolute;
-        padding:2rem;
+        padding:1rem;
         width: 10rem;
         height: 12rem;
         border-radius: 10px;
@@ -42,7 +42,18 @@
         &__checkout{
             display: flex;
             height: 100%;
+            width: 100%;
             justify-content: center;
+            & button{
+                width: 100%!important;
+            }
         }
     }
+
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
