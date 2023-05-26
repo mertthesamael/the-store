@@ -35,7 +35,9 @@ const UserButton = ({number, basket}:{number:number, basket?:boolean}) => {
                         <Link href={'/profile'}>Settings</Link>
                     </div>
                     <div className={styles.userButton__dropdown__checkout}>
+                        <Link href='/checkout'>
                         <ThemeButton color="#46E99B" text={'Checkout'} onClick={""} />
+                        </Link>
                     </div>
                 </div>
             </div>
