@@ -27,7 +27,7 @@ const UserButton = ({number, basket}:{number:number, basket?:boolean}) => {
         return(
             <div onClick={openHandler} className={styles.userButton}>
                 <p>{number}</p>
-                <div style={isOpen?{height:'12rem'} :{height:'0', padding:'0'}} className={styles.userButton__dropdown}>
+                <div style={isOpen?{height:'15rem'} :{height:'0', padding:'0 1rem'}} className={styles.userButton__dropdown}>
                     <div className={styles.userButton__dropdown__nav}>
                         <Link href={'/profile'}>Orders</Link>
                         <Link href={'/profile'}>Adress</Link>
@@ -38,6 +38,8 @@ const UserButton = ({number, basket}:{number:number, basket?:boolean}) => {
                         <Link href='/checkout'>
                         <ThemeButton color="#46E99B" text={'Checkout'} onClick={""} />
                         </Link>
+                        
+                        <ThemeButton color="#E26161" text={'Logout'} onClick={""} />
                     </div>
                 </div>
             </div>

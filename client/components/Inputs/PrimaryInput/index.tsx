@@ -19,6 +19,13 @@ const PrimaryInput = ({color, lineColor, darkIcon, type, iconless}:any) => {
             </div>
             </div>
         )
+    }else if(type==='checkbox'){
+        return(<div style={{borderBottom:`1px solid ${lineColor}`}} className={styles.primaryInput}>
+        <label>
+            {!iconless&&<Image style={darkIcon&&{filter:'brightness(0)'}} src={profile} alt='label'></Image>}
+        </label>
+        <input style={{color:color}} type="checkbox"/>
+    </div>)
     }
     return(
         <div style={{borderBottom:`1px solid ${lineColor}`}} className={styles.primaryInput}>

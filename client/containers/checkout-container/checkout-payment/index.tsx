@@ -7,7 +7,12 @@ const CheckoutPayment = () => {
 
     return(
         <div className={styles.checkoutPayment}>
+            <div>
+            <h1>Checkout</h1>
+            <p>Lorem ipsum dolor sit amen açıklama yazısı zart zurt</p>
+            </div>
             <div className={styles.checkoutPayment__form}>
+                <h2>1. Contact Information</h2>
                 <PaymentForm />
             </div>
             <div className={styles.checkoutPayment__paymentInfo}>
