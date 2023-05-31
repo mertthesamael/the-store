@@ -1,9 +1,19 @@
+"use client"
 import Header from "@/components/Header"
 import styles from "./style.module.scss"
+import { useEffect } from "react"
+import axios from "axios"
 
 
 const HomeWelcome = () => {
-
+    const fetchData = async() => {
+        const data =await axios("/api/test")
+        console.log(data)
+        
+    }
+    useEffect(() => {
+        fetchData()
+    },[])
     return(
         <section id='welcome' className={styles.welcome}>
             <Header></Header>
