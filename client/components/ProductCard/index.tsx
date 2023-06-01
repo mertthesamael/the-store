@@ -1,21 +1,20 @@
 import Image from "next/image"
 import styles from "./style.module.scss"
-import jump from "@/assets/png/jump.png"
 import ThemeButton from "../Buttons/ThemeButton"
 import Link from "next/link"
+import { Product } from "@/types/types"
 
-const ProductCard = () => {
-
+const ProductCard = ({item}:{item:Product}) => {
 
     return(
         <div className={styles.card}>
-            <Link href="/item" className={styles.card__image}>
-                <Image src={jump} alt="product" fill style={{objectFit:'cover'}}></Image>
+            <Link href={`/product?id=${item.id}`} className={styles.card__image}>
+                <Image src={item.img} alt="product" fill style={{objectFit:'cover'}}></Image>
             </Link>
-            <Link href="/item" className={styles.card__info}>
+            <Link href={`/product?id=${item.id}`} className={styles.card__info}>
                 <div>
                     <h1>
-                        Jump
+                        {item.name}
                     </h1>
                     <p>
                     Lorem ipsum dolor sit amen ffalan bişeyler zort...
@@ -23,7 +22,7 @@ const ProductCard = () => {
                 </div>
                 <div className={styles.card__info__cta}>
                     <ThemeButton text={'Buy Now'} color="rgba(70, 233, 155, 0.94)" onClick={""}></ThemeButton>
-                    <h2>59.90$</h2>
+                    <h2>{item.price.toFixed(2)}$</h2>
                 </div>
             </Link>
         </div>

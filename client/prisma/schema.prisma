@@ -6,6 +6,20 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model User {
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  email   String   @unique
+  name    String?
+  basket  BasketItem[]
+}
+type BasketItem {
+  id String
+  name String
+  size String
+  quantity Int
+  price Float
+}
 model Product {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
   name     String 
@@ -14,30 +28,34 @@ model Product {
   size     Size[]
   quantity Int
 }
-model Post {
-  id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  slug     String    @unique
-  title    String
-  body     String
-  author   User      @relation(fields: [authorId], references: [id])
-  authorId String    @db.ObjectId
-  comments Comment[]
-}
 
-model User {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  email   String   @unique
-  name    String?
-  address Address?
-  posts   Post[]
-}
 
-model Comment {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  comment String
-  post    Post   @relation(fields: [postId], references: [id])
-  postId  String @db.ObjectId
-}
+//model Review {
+  //id      String @id @default(auto()) @map("_id") @db.ObjectId
+  //review String
+  //author String
+  //product Product   @relation(fields: [productId], references: [id])
+  //productId  String @db.ObjectId
+//}
+
+//model Post {
+  //id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  //slug     String    @unique
+  //title    String
+  //body     String
+  //author   User      @relation(fields: [authorId], references: [id])
+  //authorId String    @db.ObjectId
+  //comments Comment[]
+//}
+
+//model User {
+  //id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  //email   String   @unique
+  //name    String?
+  //address Address?
+  //posts   Post[]
+//}
+
 
 // Address is an embedded document
 type Address {
@@ -50,3 +68,4 @@ type Size {
   quantity Int
   value String
 }
+

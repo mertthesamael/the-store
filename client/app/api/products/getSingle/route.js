@@ -4,6 +4,7 @@ const prisma = new PrismaClient()
 
 export async function POST(request) {
     const res = await request.json()
+    console.log(res)
     try{
         const product = await prisma.product.findFirst({
             where: {
@@ -12,8 +13,7 @@ export async function POST(request) {
                 }
             }
         });
-        console.log(product)
-        
+      
         return NextResponse.json(product)    
     }catch(err){
         console.log(err)

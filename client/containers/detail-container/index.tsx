@@ -7,8 +7,9 @@ import SizeButton from "@/components/Buttons/Sizebutton";
 import { useState, useEffect } from "react";
 import Review from "@/components/Review";
 import Aos from "aos";
+import { Product, Size } from "@/types/types";
 
-const DetailContainer = ({img}:{img:any}) => {
+const DetailContainer = ({item}:{item:Product}) => {
 
     const [reviewSwitch, setReviewSwitch]= useState(false);
     useEffect(() => {
@@ -17,16 +18,14 @@ const DetailContainer = ({img}:{img:any}) => {
     return(
         <div className={styles.detail}>
             <div className={styles.detail__img}>
-                <Image src={img} alt="product" fill style={{objectFit:'cover'}}></Image>
+                <Image src={item.img} alt="product" fill style={{objectFit:'cover'}}></Image>
                 <div className={styles.detail__img__size}>
-                    <SizeButton text='S'/>
-                    <SizeButton text='M'/>
-                    <SizeButton text='L'/>
+                    {item.size.map((el:Size,_i:number)=><SizeButton key={_i} text={el.value}/>)}
                 </div>
             </div>
             <div className={styles.detail__info}>
                 <div className={styles.detail__info__text}>
-                    <h1>Jump</h1>
+                    <h1>{item.name}</h1>
                     {!reviewSwitch?
                 <div className={styles.detail__info__text__desc}>
                         <p data-aos="fade-right" data-aos-duration="500">The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zortThe stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort The stroee lorem ipsum dolor sit amen dolor sit lore. Lorem dlor aman sit loei is the key of the zort</p>

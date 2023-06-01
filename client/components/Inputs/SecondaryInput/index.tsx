@@ -1,5 +1,6 @@
 import styles from "./style.module.scss"
 type inputType = "text" | "password" | "radio"
+
 interface Input {
     placeholder:string,
     type:inputType,

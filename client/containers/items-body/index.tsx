@@ -2,10 +2,13 @@ import ProductCard from "@/components/ProductCard"
 import styles from "./style.module.scss"
 import CategoryAside from "@/components/CategoryAside"
 import RangeInput from "@/components/Inputs/RangeInput"
+import { Product } from "@/types/types"
 
-
-const ItemsBody = () => {
-
+interface ItemsBodyProps {
+  data: Product[];
+}
+const ItemsBody : React.FC<ItemsBodyProps> = ({data}) => {
+  console.log(data)
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>
@@ -21,21 +24,7 @@ const ItemsBody = () => {
                 </div>
             </div>
             <div className={styles.body__items}>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {data.map((el:Product,_i:number) => <ProductCard key={_i} item={el}/>)}
             </div>
         </section>
     )
