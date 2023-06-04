@@ -1,0 +1,15 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+    background-color: red;
+    z-index: 0;
+}
+.blurLayer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(175px);
+    z-index: 1;
+}

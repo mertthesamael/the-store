@@ -4,11 +4,16 @@ import CategoryAside from "@/components/CategoryAside"
 import RangeInput from "@/components/Inputs/RangeInput"
 import { Product } from "@/types/types"
 
-interface ItemsBodyProps {
-  data: Product[];
+
+
+const getAllItems = async() => {
+    const res = await fetch("http://localhost:3000/api/products/getAll")
+ 
+    return res.json()
 }
-const ItemsBody : React.FC<ItemsBodyProps> = ({data}) => {
-  console.log(data)
+
+const ItemsBody :any = async() => {
+    const data = await getAllItems()
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>

@@ -3,20 +3,20 @@ import ItemsBanner from "@/containers/items-banner";
 import ItemsBody from "@/containers/items-body";
 import styles from "./style.module.scss"
 import { Product } from "@/types/types";
+import axios from "axios";
+import { Suspense } from "react";
 
-const getAllItems = async() => {
-    const res = await fetch("http://localhost:3000/api/products/getAll")
-    return res.json()
-}
 
 const Products = async() => {
-    const items : Product[] = await getAllItems()
+   
     
     return(
         <main className={styles.products}>
             <Header />
             <ItemsBanner />
-            <ItemsBody data={items}/>
+            <Suspense fallback={<h1 style={{color:'white'}}>Loading</h1>}>
+            <ItemsBody />
+            </Suspense>
         </main>
     )
 }
