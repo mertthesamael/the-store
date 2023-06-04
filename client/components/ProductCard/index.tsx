@@ -4,15 +4,25 @@ import ThemeButton from "../Buttons/ThemeButton"
 import Link from "next/link"
 import { Product } from "@/types/types"
 
-
-const ProductCard = ({item}:{item:Product}) => {
-
+interface ProductCardProps {
+    item:Product,
+    loading?:boolean
+}
+const ProductCard : React.FC<ProductCardProps>= ({item,loading}) => {
+    if(loading){
+        return(
+            <div className={styles.card}>
+                <h1>Loading</h1>
+            
+        </div>
+        )
+    }
     return(
         <div className={styles.card}>
-            <Link href={`/products/${item.id}`} className={styles.card__image}>
+            <Link href={`/products/${item?.id}`} className={styles.card__image}>
                 <Image src={item.img} alt="product" fill style={{objectFit:'cover'}}></Image>
             </Link>
-            <Link href={`/products/${item.id}`} className={styles.card__info}>
+            <Link href={`/products/${item?.id}`} className={styles.card__info}>
                 <div>
                     <h1>
                         {item.name}

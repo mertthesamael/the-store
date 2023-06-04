@@ -5,6 +5,7 @@ import styles from "./style.module.scss"
 import { Product } from "@/types/types";
 import axios from "axios";
 import { Suspense } from "react";
+import ItemsLoading from "@/containers/items-body/loading";
 
 
 const Products = async() => {
@@ -14,7 +15,7 @@ const Products = async() => {
         <main className={styles.products}>
             <Header />
             <ItemsBanner />
-            <Suspense fallback={<h1 style={{color:'white'}}>Loading</h1>}>
+            <Suspense fallback={<ItemsLoading></ItemsLoading>}>
             <ItemsBody />
             </Suspense>
         </main>

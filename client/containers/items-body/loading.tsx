@@ -6,14 +6,8 @@ import { Product } from "@/types/types"
 
 
 
-const getAllItems = async() => {
-    const res = await fetch("http://localhost:3000/api/products/getAll")
-    await new Promise((resolve) => setTimeout(resolve,2000))
-    return res.json()
-}
 
-const ItemsBody :any = async() => {
-    const data = await getAllItems()
+const ItemsLoading :any = async() => {
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>
@@ -29,10 +23,10 @@ const ItemsBody :any = async() => {
                 </div>
             </div>
             <div className={styles.body__items}>
-                {data.map((el:Product,_i:number) => <ProductCard key={_i} item={el}/>)}
+                {Array.from({length: 10,}, (_,i) => i +1).map((_i) => <ProductCard key={_i} loading/>)}
             </div>
         </section>
     )
 }
 
-export default ItemsBody
+export default ItemsLoading
