@@ -10,6 +10,10 @@ export default function Home() {
 
   return (
     <main className={styles.home}>
+     <HomeWelcome></HomeWelcome>
+     <HomeTestimonial></HomeTestimonial>
+     <HomeCategories></HomeCategories>
+     <HomeFooter></HomeFooter>
     </main>
   )
 }

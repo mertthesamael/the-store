@@ -13,7 +13,7 @@ import DetailContent from "./detail-content";
 import DetailBackground from "./detail-background";
 
 const fetchSingleItem = async(id:string) => {
-    const res = await axios.post("http://localhost:3000/api/products/getSingle",{id:id})
+    const res = await axios.post("https://the-store-gamma.vercel.app/api/products/getSingle",{id:id})
  
     return res.data
 }

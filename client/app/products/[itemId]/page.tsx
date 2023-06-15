@@ -11,6 +11,10 @@ const ItemId = ({params}:any) => {
 
     return(
         <main className={styles.product}>
+            <Header />
+            <Suspense fallback={<LoadingText />}>
+                <DetailContainer id={params.itemId}/>
+            </Suspense>
         </main>
     )
 }

@@ -9,7 +9,7 @@ import axios from "axios"
 
 
 const getAllItems = async() => {
-    const res = await axios("http://localhost:3000/api/products/getAll")
+    const res = await axios("https://the-store-gamma.vercel.app/api/products/getAll")
   
     await new Promise((resolve) => setTimeout(resolve,1000))
     return res.data

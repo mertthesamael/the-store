@@ -13,6 +13,11 @@ const Products = async() => {
     
     return(
         <main className={styles.products}>
+            <Header />
+            <ItemsBanner />
+            <Suspense fallback={<ItemsLoading></ItemsLoading>}>
+                <ItemsBody />
+            </Suspense>
         </main>
     )
 }
