@@ -16,7 +16,7 @@ const Products = async() => {
             <Header />
             <ItemsBanner />
             <Suspense fallback={<ItemsLoading></ItemsLoading>}>
-            <ItemsBody />
+                <ItemsBody />
             </Suspense>
         </main>
     )

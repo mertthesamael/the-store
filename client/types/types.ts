@@ -6,14 +6,14 @@ type Review = {
     productId:string
 }
 export type Size = {
-    quantity:number
+    quantity:number,
     value:string,
 }
 export interface Product {
     id:string,
     name:string,
-    img:string
-    price:number
+    img:string,
+    price:number,
     size:Size[],
     quantity:number,
 }

@@ -1,0 +1,21 @@
+.loading{
+    background-image: url("../../assets/png/testimonialbg.png");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    background-repeat: no-repeat;
+    animation: loading 2s infinite;
+    font-weight: bolder;
+    
+}
+
+@keyframes loading {
+    from{
+        background-position: top 80px right 10px;
+    }
+    to{
+        background-position: 100;
+
+    }
+    
+}

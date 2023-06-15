@@ -3,17 +3,21 @@ import styles from "./style.module.scss"
 import CategoryAside from "@/components/CategoryAside"
 import RangeInput from "@/components/Inputs/RangeInput"
 import { Product } from "@/types/types"
+import LoadingText from "@/components/LoadingText"
+import axios from "axios"
 
 
 
 const getAllItems = async() => {
-    const res = await fetch("http://localhost:3000/api/products/getAll")
-    await new Promise((resolve) => setTimeout(resolve,2000))
-    return res.json()
+    const res = await axios("http://localhost:3000/api/products/getAll")
+  
+    await new Promise((resolve) => setTimeout(resolve,1000))
+    return res.data
 }
 
 const ItemsBody :any = async() => {
     const data = await getAllItems()
+   
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>
