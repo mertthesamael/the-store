@@ -7,9 +7,8 @@ import axios from "axios";
 import { Suspense } from "react";
 import ItemsLoading from "@/containers/items-body/loading";
 
-
 const Products = async() => {
-   
+    
     
     return(
         <main className={styles.products}>
