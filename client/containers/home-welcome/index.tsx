@@ -6,8 +6,21 @@ import axios from "axios"
 
 
 const HomeWelcome = () => {
+    /*id
+    author
+    product
+    rate*/
+    let product = {
+        id: '6485d353c7ebbb15cb24751c',
+        name: 'Terror',
+        img: 'https://raw.githubusercontent.com/mertthesamael/the-store/main/client/assets/png/products/terror.png',
+        price: 59.9,
+        size: [ [Object], [Object], [Object] ],
+        quantity: 60
+      }
     const fetchData = async() => {
-        const data =await axios("/api/test")
+        const data = await axios.post("/api/user/review",{product:product,rate:3,author:"test"})
+     
         console.log(data)
         
     }

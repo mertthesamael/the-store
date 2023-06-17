@@ -17,7 +17,6 @@ const getAllItems = async() => {
 
 const ItemsBody :any = async() => {
     const data = await getAllItems()
-   
     return(
         <section className={styles.body}>
             <div className={styles.body__category}>
