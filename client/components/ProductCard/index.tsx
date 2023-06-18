@@ -18,24 +18,9 @@ const ProductCard : React.FC<ProductCardProps>= ({item,loading}) => {
             </div>
         )
     }
-    let a = 0;
-    const hoverHandler = () => {
-       
-            
-          var counter =  setInterval(() => {
-                console.log(a++)
-            }, 1000)
-            setTimeout(() => {
-                clearInterval(counter);
-                console.log("Interval stopped.");
-            }, 5000);
-        
-    }
-    const resetHover = () => {
-        a = 0;
-    }
+   
     return(
-        <div onMouseEnter={hoverHandler} onMouseLeave={resetHover} className={styles.card}>
+        <div className={styles.card}>
             <Link href={`/products/${item?.id}`} className={styles.card__image}>
                 <Image src={item?item.img:""} alt="product" fill style={{objectFit:'cover'}}></Image>
             </Link>

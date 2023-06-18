@@ -5,14 +5,15 @@ import RangeInput from "@/components/Inputs/RangeInput"
 import { Product } from "@/types/types"
 import LoadingText from "@/components/LoadingText"
 import axios from "axios"
+import next from "next/types"
 
 
 
 const getAllItems = async() => {
-    const res = await axios("https://the-store-gamma.vercel.app/api/products/getAll")
+    const res = await fetch(process.env.API_ENDPOINT || "http://localhost:3000" + "/api/products/getAll", {next:{revalidate:10}})
   
     await new Promise((resolve) => setTimeout(resolve,1000))
-    return res.data
+    return res.json()
 }
 
 const ItemsBody :any = async() => {
